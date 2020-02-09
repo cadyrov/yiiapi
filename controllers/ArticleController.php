@@ -36,7 +36,7 @@ class ArticleController extends BaseController
                     [
                         'actions' => ['index','view','create','delete','update'],
                         'allow' => true,
-                        'roles' => ['admin'],
+                        'roles' => ['dictionary'],
                     ],
                 ],
             ],
