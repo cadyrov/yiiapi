@@ -126,7 +126,7 @@ class ArticleController extends BaseController
     */
     public function actionDelete()
 	{
-		$id = Yii::$app->request->get('id');
+		$id = Yii::$app->request->post('id');
 		if (!$id) {
 			self::error('Send id');
 			return;
