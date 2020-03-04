@@ -18,11 +18,7 @@ instal composer
 
 install yii with extension
 
-    php composer.phar create-project --prefer-dist yiisoft/yii2-app-basic basic
-    php composer.phar require cadyrov/yii2-gii "*"
-    php composer.phar require zircote/swagger-php
-
-replace basic folders to this repository folders
+    php composer.phar update
 
 check config db
 
