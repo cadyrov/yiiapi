@@ -6,6 +6,7 @@ use yii\rest\Controller;
 use app\models\Cookies;
 use app\models\User;
 use yii\web\Response;
+use app\models\Logs;
 
 /**
  * @OA\OpenApi(
@@ -129,6 +130,37 @@ class BaseController extends Controller
         Yii::$app->response->headers->set('Access-Control-Allow-Methods', 'POST, OPTIONS, GET, PUT, DELETE');
         Yii::$app->response->headers->set('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
     }
+    
+    public static function createLog($model, $message){
+        self::toLog(Logs::TYPE_CREATE, $model, $message);
+    }
+
+    public static function updateLog($model, $message){
+        self::toLog(Logs::TYPE_UPDATE, $model, $message);
+    }
+
+    public static function deleteLog($model, $message){
+        self::toLog(Logs::TYPE_DELETE, $model, $message);
+    }
+
+    public static function restoreLog($model, $message){
+        self::toLog(Logs::TYPE_RESTORE, $model, $message);
+    }
+
+    private static function toLog($typeId, $model, $message){
+        if (!self::$user) {
+            return;
+        }
+        $log = new Logs();
+        $log->message = $message;
+        $log->model = $model;
+        $log->type_id = $typeId;
+        $log->user_id = self::$user->id;
+        $log->create_at = date('Y-m-d H:i:s');
+        if (!$log->save()) {
+            self::error($log->getErrors(), 500);
+        }
+    } 
 
     public static function fileList($dir)
     {
