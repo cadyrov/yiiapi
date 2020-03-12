@@ -20,7 +20,7 @@ class m200310_110028_logs extends Migration
             'create_at' => $this->dateTime()->notNull(),
             'message' => $this->dateTime()->notNull(),
             'model' => $this->text()->notNull(),
-            'type_id'=> $this->integer()),
+            'type_id'=> $this->integer(),
 
         ]);
     }
