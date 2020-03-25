@@ -105,7 +105,7 @@ class RoleController extends BaseController
     public function actionAssign()
     {
         $name = Yii::$app->request->post('name');
-        $userId = Yii::$app->request->post('userId');
+        $userId = Yii::$app->request->post('user_id');
         if ($name == null || $userId == null) {
             self::error("send userId and name");
             return;
@@ -157,7 +157,7 @@ class RoleController extends BaseController
     public function actionRevoke()
     {
         $name = Yii::$app->request->post('name');
-        $userId = Yii::$app->request->post('userId');
+        $userId = Yii::$app->request->post('user_id');
         if ($name == null || $userId == null) {
             self::error("send userId and name");
             return;
