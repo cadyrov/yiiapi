@@ -13,7 +13,7 @@ use app\controllers\Dictionary;
  * @OA\OpenApi(
  *     @OA\Info(
  *         version="1.0.0",
- *         title="",
+ *         title="Rehau-kitchen",
  *     ),
  *     @OA\Server(
  *         description="Api server",
@@ -68,11 +68,16 @@ class BaseController extends Controller
         self::$hasError = true;
     }
 
-    public static function ok($data = [], $msg = "ОК")
+    public static function ok($data = [], $msg = "ОК", $total = null, $page = null, $limit = null)
     {
         $data = [
             'message' => $msg,
             'data' => $data,
+            'pagination' => [
+                'total' => $total,
+                'page' => $page,
+                'limit' => $limit 
+            ]
         ];
         self::setHeadersCors();
         Yii::$app->response->data = $data;
@@ -171,7 +176,7 @@ class BaseController extends Controller
         }
         return '%' . mb_strtolower($query) . '%';
     }
-    
+
     public static function fileList($dir)
     {
         $array = [];
