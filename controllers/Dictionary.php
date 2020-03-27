@@ -9,7 +9,7 @@ const LOGS_DELETE = 30;
 const LOGS_RESTORE = 40;
 
 
-
+const QUERY_LIMIT = 2;
 
 
 
