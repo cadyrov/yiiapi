@@ -13,7 +13,7 @@ use app\controllers\Dictionary;
  * @OA\OpenApi(
  *     @OA\Info(
  *         version="1.0.0",
- *         title="Rehau-kitchen",
+ *         title="",
  *     ),
  *     @OA\Server(
  *         description="Api server",
@@ -164,6 +164,14 @@ class BaseController extends Controller
         }
     } 
 
+    public static function getStringToLike($query)
+    {
+        if ($query == null || trim($query) == ''){
+            return;
+        }
+        return '%' . mb_strtolower($query) . '%';
+    }
+    
     public static function fileList($dir)
     {
         $array = [];
