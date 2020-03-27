@@ -7,16 +7,17 @@ use app\models\Cookies;
 use app\models\User;
 use yii\web\Response;
 use app\models\Logs;
+use app\controllers\Dictionary;
 
 /**
  * @OA\OpenApi(
  *     @OA\Info(
  *         version="1.0.0",
- *         title="api v1",
+ *         title="Rehau-kitchen",
  *     ),
  *     @OA\Server(
  *         description="Api server",
- *         url="http://fnhub.ru/web/index.php/",
+ *         url="http://api.rehau-kitchen.by/index.php/", 
  *     ),
  * )
  * 
@@ -132,25 +133,26 @@ class BaseController extends Controller
     }
     
     public static function createLog($model, $message){
-        self::toLog(Logs::TYPE_CREATE, $model, $message);
+        self::toLog(Dictionary::LOGS_CREATE, $model, $message);
     }
 
     public static function updateLog($model, $message){
-        self::toLog(Logs::TYPE_UPDATE, $model, $message);
+        self::toLog(Dictionary::LOGS_UPDATE, $model, $message);
     }
 
     public static function deleteLog($model, $message){
-        self::toLog(Logs::TYPE_DELETE, $model, $message);
+        self::toLog(Dictionary::LOGS_DELETE, $model, $message);
     }
 
     public static function restoreLog($model, $message){
-        self::toLog(Logs::TYPE_RESTORE, $model, $message);
+        self::toLog(Dictionary::LOGS_RESTORE, $model, $message);
     }
 
     private static function toLog($typeId, $model, $message){
         if (!self::$user) {
             return;
         }
+        return;
         $log = new Logs();
         $log->message = $message;
         $log->model = $model;
