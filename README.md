@@ -1,5 +1,5 @@
 <p align="center">
-    <h1 align="center">Yii 2 api create</h1>
+    <h1 align="center">Yii 2 rest api</h1>
     <br>
 </p>
 
