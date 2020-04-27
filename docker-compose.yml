@@ -1,0 +1,20 @@
+version: '2.4'
+services:
+    nginx:
+        image: nginx:latest
+        ports:
+            - "80:80"
+            - "443:443"
+        volumes:
+            - ./docker/hosts:/etc/nginx/conf.d
+            - ./:/var/www/yiiapi
+            - ./docker/logs:/var/log/nginx
+        links:
+            - php
+        mem_limit: 500m
+    php:
+        build: ./docker/images/php
+        volumes:
+            - ./:/var/www/yiiapi
+        mem_limit: 700m    
+        

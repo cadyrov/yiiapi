@@ -1,0 +1,551 @@
+2020/04/26 16:50:23 [error] 6#6: *1 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.18.0.1, server: techcon, request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.2:9000", host: "127.0.0.1"
+2020/04/26 16:50:23 [error] 6#6: *1 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.18.0.1, server: techcon, request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.2:9000", host: "127.0.0.1"
+2020/04/26 16:51:23 [error] 6#6: *1 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.18.0.1, server: techcon, request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.2:9000", host: "127.0.0.1"
+2020/04/26 16:51:23 [error] 6#6: *1 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.18.0.1, server: techcon, request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.2:9000", host: "127.0.0.1"
+2020/04/26 17:12:41 [error] 6#6: *18 open() "/var/www/techcon/web/index.php/auth" failed (2: No such file or directory), client: 172.18.0.1, server: techcon, request: "GET /web/index.php/auth HTTP/1.1", host: "127.0.0.1"
+2020/04/26 17:12:41 [error] 6#6: *18 open() "/var/www/techcon/web/index.php/auth" failed (2: No such file or directory), client: 172.18.0.1, server: techcon, request: "GET /web/index.php/auth HTTP/1.1", host: "127.0.0.1"
+2020/04/26 17:12:51 [error] 6#6: *18 "/var/www/techcon/web/index.php/index.php" is not found (2: No such file or directory), client: 172.18.0.1, server: techcon, request: "GET /web/index.php/ HTTP/1.1", host: "127.0.0.1"
+2020/04/26 17:12:51 [error] 6#6: *18 "/var/www/techcon/web/index.php/index.php" is not found (2: No such file or directory), client: 172.18.0.1, server: techcon, request: "GET /web/index.php/ HTTP/1.1", host: "127.0.0.1"
+2020/04/26 17:15:08 [error] 6#6: *19 "/var/www/techcon/web/index.php/index.php" is not found (2: No such file or directory), client: 172.18.0.1, server: techcon, request: "GET /web/index.php/ HTTP/1.1", host: "127.0.0.1"
+2020/04/26 17:15:09 [error] 6#6: *20 "/var/www/techcon/web/index.php/index.php" is not found (2: No such file or directory), client: 172.18.0.1, server: techcon, request: "GET /web/index.php/ HTTP/1.1", host: "127.0.0.1"
+2020/04/26 17:16:50 [emerg] 1#1: host not found in upstream "php" in /etc/nginx/conf.d/techcon.conf:11
+2020/04/26 17:25:10 [emerg] 1#1: host not found in upstream "php" in /etc/nginx/conf.d/techcon.conf:11
+2020/04/26 17:33:45 [emerg] 1#1: host not found in upstream "php" in /etc/nginx/conf.d/techcon.conf:11
+2020/04/26 17:34:31 [emerg] 1#1: host not found in upstream "php" in /etc/nginx/conf.d/techcon.conf:11
+2020/04/26 18:38:12 [error] 6#6: *7 open() "/var/www/techcon/web/index.php/auth" failed (2: No such file or directory), client: 172.20.0.1, server: techcon, request: "GET /web/index.php/auth HTTP/1.1", host: "127.0.0.1"
+2020/04/26 18:38:12 [error] 6#6: *7 open() "/var/www/techcon/web/index.php/auth" failed (2: No such file or directory), client: 172.20.0.1, server: techcon, request: "GET /web/index.php/auth HTTP/1.1", host: "127.0.0.1"
+2020/04/26 18:38:14 [error] 6#6: *7 open() "/var/www/techcon/web/index.php/auth" failed (2: No such file or directory), client: 172.20.0.1, server: techcon, request: "GET /web/index.php/auth HTTP/1.1", host: "127.0.0.1"
+2020/04/26 18:38:14 [error] 6#6: *5 open() "/var/www/techcon/web/index.php/auth" failed (2: No such file or directory), client: 172.20.0.1, server: techcon, request: "GET /web/index.php/auth HTTP/1.1", host: "127.0.0.1"
+2020/04/26 18:39:04 [error] 6#6: *5 open() "/var/www/techcon/index.php/auth" failed (20: Not a directory), client: 172.20.0.1, server: techcon, request: "GET /index.php/auth HTTP/1.1", host: "127.0.0.1"
+2020/04/26 18:39:04 [error] 6#6: *5 open() "/var/www/techcon/index.php/auth" failed (20: Not a directory), client: 172.20.0.1, server: techcon, request: "GET /index.php/auth HTTP/1.1", host: "127.0.0.1"
+2020/04/26 18:44:07 [error] 6#6: *13 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\base\InvalidRouteException: Unable to resolve the request "site/error". in /var/www/techcon/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /var/www/techcon/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction('site/error')
+#1 /var/www/techcon/vendor/yiisoft/yii2/base/ErrorHandler.php(123): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#2 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#3 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "". in /var/www/techcon/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /var/www/techcon/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('', Array)
+#1 /var/www/techcon/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /var/www/techcon/web/index.php(12): yii\base\Applica" while reading upstream, client: 172.20.0.1, server: techcon, request: "GET /web/index.php HTTP/1.1", upstream: "fastcgi://172.20.0.2:9000", host: "127.0.0.1"
+2020/04/26 18:44:08 [error] 6#6: *13 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\base\InvalidRouteException: Unable to resolve the request "site/error". in /var/www/techcon/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /var/www/techcon/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction('site/error')
+#1 /var/www/techcon/vendor/yiisoft/yii2/base/ErrorHandler.php(123): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#2 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#3 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "". in /var/www/techcon/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /var/www/techcon/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('', Array)
+#1 /var/www/techcon/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /var/www/techcon/web/index.php(12): yii\base\Applica" while reading upstream, client: 172.20.0.1, server: techcon, request: "GET /web/index.php HTTP/1.1", upstream: "fastcgi://172.20.0.2:9000", host: "127.0.0.1"
+2020/04/26 18:44:12 [error] 6#6: *13 open() "/var/www/techcon/web/index.php/auth" failed (20: Not a directory), client: 172.20.0.1, server: techcon, request: "GET /web/index.php/auth HTTP/1.1", host: "127.0.0.1"
+2020/04/26 18:44:12 [error] 6#6: *13 open() "/var/www/techcon/web/index.php/auth" failed (20: Not a directory), client: 172.20.0.1, server: techcon, request: "GET /web/index.php/auth HTTP/1.1", host: "127.0.0.1"
+2020/04/26 18:44:19 [error] 6#6: *13 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\base\InvalidRouteException: Unable to resolve the request "site/error". in /var/www/techcon/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /var/www/techcon/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction('site/error')
+#1 /var/www/techcon/vendor/yiisoft/yii2/base/ErrorHandler.php(123): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#2 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#3 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "". in /var/www/techcon/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /var/www/techcon/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('', Array)
+#1 /var/www/techcon/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /var/www/techcon/web/index.php(12): yii\base\Applica" while reading upstream, client: 172.20.0.1, server: techcon, request: "GET /web/index.php HTTP/1.1", upstream: "fastcgi://172.20.0.2:9000", host: "127.0.0.1"
+2020/04/26 18:44:20 [error] 6#6: *13 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\base\InvalidRouteException: Unable to resolve the request "site/error". in /var/www/techcon/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /var/www/techcon/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction('site/error')
+#1 /var/www/techcon/vendor/yiisoft/yii2/base/ErrorHandler.php(123): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#2 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#3 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "". in /var/www/techcon/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /var/www/techcon/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('', Array)
+#1 /var/www/techcon/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /var/www/techcon/web/index.php(12): yii\base\Applica" while reading upstream, client: 172.20.0.1, server: techcon, request: "GET /web/index.php HTTP/1.1", upstream: "fastcgi://172.20.0.2:9000", host: "127.0.0.1"
+2020/04/26 18:44:32 [error] 6#6: *13 open() "/var/www/techcon/web/index.php/auth/check" failed (20: Not a directory), client: 172.20.0.1, server: techcon, request: "GET /web/index.php/auth/check HTTP/1.1", host: "127.0.0.1"
+2020/04/26 18:44:32 [error] 6#6: *13 open() "/var/www/techcon/web/index.php/auth/check" failed (20: Not a directory), client: 172.20.0.1, server: techcon, request: "GET /web/index.php/auth/check HTTP/1.1", host: "127.0.0.1"
+2020/04/26 18:44:40 [error] 6#6: *13 "/var/www/techcon/web/index.php/auth/index.php" is not found (20: Not a directory), client: 172.20.0.1, server: techcon, request: "GET /web/index.php/auth/ HTTP/1.1", host: "127.0.0.1"
+2020/04/26 18:44:40 [error] 6#6: *13 "/var/www/techcon/web/index.php/auth/index.php" is not found (20: Not a directory), client: 172.20.0.1, server: techcon, request: "GET /web/index.php/auth/ HTTP/1.1", host: "127.0.0.1"
+2020/04/26 18:47:34 [error] 6#6: *18 "/var/www/techcon/web/index.php/auth/index.php" is not found (20: Not a directory), client: 172.20.0.1, server: techcon, request: "GET /web/index.php/auth/ HTTP/1.1", host: "127.0.0.1"
+2020/04/26 18:47:34 [error] 6#6: *19 "/var/www/techcon/web/index.php/auth/index.php" is not found (20: Not a directory), client: 172.20.0.1, server: techcon, request: "GET /web/index.php/auth/ HTTP/1.1", host: "127.0.0.1"
+2020/04/26 18:47:35 [error] 6#6: *19 "/var/www/techcon/web/index.php/auth/index.php" is not found (20: Not a directory), client: 172.20.0.1, server: techcon, request: "GET /web/index.php/auth/ HTTP/1.1", host: "127.0.0.1"
+2020/04/26 18:47:35 [error] 6#6: *18 "/var/www/techcon/web/index.php/auth/index.php" is not found (20: Not a directory), client: 172.20.0.1, server: techcon, request: "GET /web/index.php/auth/ HTTP/1.1", host: "127.0.0.1"
+2020/04/26 18:47:35 [error] 6#6: *18 "/var/www/techcon/web/index.php/auth/index.php" is not found (20: Not a directory), client: 172.20.0.1, server: techcon, request: "GET /web/index.php/auth/ HTTP/1.1", host: "127.0.0.1"
+2020/04/26 18:47:35 [error] 6#6: *19 "/var/www/techcon/web/index.php/auth/index.php" is not found (20: Not a directory), client: 172.20.0.1, server: techcon, request: "GET /web/index.php/auth/ HTTP/1.1", host: "127.0.0.1"
+2020/04/26 18:47:35 [error] 6#6: *19 "/var/www/techcon/web/index.php/auth/index.php" is not found (20: Not a directory), client: 172.20.0.1, server: techcon, request: "GET /web/index.php/auth/ HTTP/1.1", host: "127.0.0.1"
+2020/04/26 18:47:36 [error] 6#6: *18 "/var/www/techcon/web/index.php/auth/index.php" is not found (20: Not a directory), client: 172.20.0.1, server: techcon, request: "GET /web/index.php/auth/ HTTP/1.1", host: "127.0.0.1"
+2020/04/26 18:47:36 [error] 6#6: *18 "/var/www/techcon/web/index.php/auth/index.php" is not found (20: Not a directory), client: 172.20.0.1, server: techcon, request: "GET /web/index.php/auth/ HTTP/1.1", host: "127.0.0.1"
+2020/04/26 18:47:36 [error] 6#6: *18 "/var/www/techcon/web/index.php/auth/index.php" is not found (20: Not a directory), client: 172.20.0.1, server: techcon, request: "GET /web/index.php/auth/ HTTP/1.1", host: "127.0.0.1"
+2020/04/26 18:47:36 [error] 6#6: *18 "/var/www/techcon/web/index.php/auth/index.php" is not found (20: Not a directory), client: 172.20.0.1, server: techcon, request: "GET /web/index.php/auth/ HTTP/1.1", host: "127.0.0.1"
+2020/04/26 18:47:36 [error] 6#6: *19 "/var/www/techcon/web/index.php/auth/index.php" is not found (20: Not a directory), client: 172.20.0.1, server: techcon, request: "GET /web/index.php/auth/ HTTP/1.1", host: "127.0.0.1"
+2020/04/26 18:50:40 [error] 6#6: *1 "/var/www/techcon/web/index.php/auth/index.php" is not found (20: Not a directory), client: 172.21.0.1, server: techcon, request: "GET /web/index.php/auth/ HTTP/1.1", host: "127.0.0.1"
+2020/04/26 18:50:40 [error] 6#6: *2 "/var/www/techcon/web/index.php/auth/index.php" is not found (20: Not a directory), client: 172.21.0.1, server: techcon, request: "GET /web/index.php/auth/ HTTP/1.1", host: "127.0.0.1"
+2020/04/26 18:50:41 [error] 6#6: *2 "/var/www/techcon/web/index.php/auth/index.php" is not found (20: Not a directory), client: 172.21.0.1, server: techcon, request: "GET /web/index.php/auth/ HTTP/1.1", host: "127.0.0.1"
+2020/04/26 18:50:41 [error] 6#6: *1 "/var/www/techcon/web/index.php/auth/index.php" is not found (20: Not a directory), client: 172.21.0.1, server: techcon, request: "GET /web/index.php/auth/ HTTP/1.1", host: "127.0.0.1"
+2020/04/26 18:50:41 [error] 6#6: *1 "/var/www/techcon/web/index.php/auth/index.php" is not found (20: Not a directory), client: 172.21.0.1, server: techcon, request: "GET /web/index.php/auth/ HTTP/1.1", host: "127.0.0.1"
+2020/04/26 18:50:41 [error] 6#6: *2 "/var/www/techcon/web/index.php/auth/index.php" is not found (20: Not a directory), client: 172.21.0.1, server: techcon, request: "GET /web/index.php/auth/ HTTP/1.1", host: "127.0.0.1"
+2020/04/26 18:50:41 [error] 6#6: *2 "/var/www/techcon/web/index.php/auth/index.php" is not found (20: Not a directory), client: 172.21.0.1, server: techcon, request: "GET /web/index.php/auth/ HTTP/1.1", host: "127.0.0.1"
+2020/04/26 18:50:41 [error] 6#6: *2 "/var/www/techcon/web/index.php/auth/index.php" is not found (20: Not a directory), client: 172.21.0.1, server: techcon, request: "GET /web/index.php/auth/ HTTP/1.1", host: "127.0.0.1"
+2020/04/26 18:50:41 [error] 6#6: *1 "/var/www/techcon/web/index.php/auth/index.php" is not found (20: Not a directory), client: 172.21.0.1, server: techcon, request: "GET /web/index.php/auth/ HTTP/1.1", host: "127.0.0.1"
+2020/04/26 18:50:41 [error] 6#6: *1 "/var/www/techcon/web/index.php/auth/index.php" is not found (20: Not a directory), client: 172.21.0.1, server: techcon, request: "GET /web/index.php/auth/ HTTP/1.1", host: "127.0.0.1"
+2020/04/26 18:50:41 [error] 6#6: *1 "/var/www/techcon/web/index.php/auth/index.php" is not found (20: Not a directory), client: 172.21.0.1, server: techcon, request: "GET /web/index.php/auth/ HTTP/1.1", host: "127.0.0.1"
+2020/04/26 18:50:41 [error] 6#6: *2 "/var/www/techcon/web/index.php/auth/index.php" is not found (20: Not a directory), client: 172.21.0.1, server: techcon, request: "GET /web/index.php/auth/ HTTP/1.1", host: "127.0.0.1"
+2020/04/26 18:50:46 [error] 6#6: *1 "/var/www/techcon/web/index.php/auth/index.php" is not found (20: Not a directory), client: 172.21.0.1, server: techcon, request: "GET /web/index.php/auth/ HTTP/1.1", host: "127.0.0.1"
+2020/04/26 18:50:46 [error] 6#6: *4 "/var/www/techcon/web/index.php/auth/index.php" is not found (20: Not a directory), client: 172.21.0.1, server: techcon, request: "GET /web/index.php/auth/ HTTP/1.1", host: "127.0.0.1"
+2020/04/26 18:50:50 [error] 6#6: *4 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\base\InvalidRouteException: Unable to resolve the request "site/error". in /var/www/techcon/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /var/www/techcon/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction('site/error')
+#1 /var/www/techcon/vendor/yiisoft/yii2/base/ErrorHandler.php(123): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#2 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#3 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "". in /var/www/techcon/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /var/www/techcon/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('', Array)
+#1 /var/www/techcon/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /var/www/techcon/web/index.php(12): yii\base\Applica" while reading upstream, client: 172.21.0.1, server: techcon, request: "GET /web/index.php HTTP/1.1", upstream: "fastcgi://172.21.0.2:9000", host: "127.0.0.1"
+2020/04/26 18:50:51 [error] 6#6: *4 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\base\InvalidRouteException: Unable to resolve the request "site/error". in /var/www/techcon/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /var/www/techcon/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction('site/error')
+#1 /var/www/techcon/vendor/yiisoft/yii2/base/ErrorHandler.php(123): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#2 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#3 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "". in /var/www/techcon/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /var/www/techcon/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('', Array)
+#1 /var/www/techcon/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /var/www/techcon/web/index.php(12): yii\base\Applica" while reading upstream, client: 172.21.0.1, server: techcon, request: "GET /web/index.php HTTP/1.1", upstream: "fastcgi://172.21.0.2:9000", host: "127.0.0.1"
+2020/04/26 18:50:53 [error] 6#6: *4 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\base\InvalidRouteException: Unable to resolve the request "site/error". in /var/www/techcon/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /var/www/techcon/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction('site/error')
+#1 /var/www/techcon/vendor/yiisoft/yii2/base/ErrorHandler.php(123): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#2 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#3 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "". in /var/www/techcon/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /var/www/techcon/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('', Array)
+#1 /var/www/techcon/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /var/www/techcon/web/index.php(12): yii\base\Applica" while reading upstream, client: 172.21.0.1, server: techcon, request: "GET /web/index.php HTTP/1.1", upstream: "fastcgi://172.21.0.2:9000", host: "127.0.0.1"
+2020/04/26 18:50:54 [error] 6#6: *1 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\base\InvalidRouteException: Unable to resolve the request "site/error". in /var/www/techcon/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /var/www/techcon/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction('site/error')
+#1 /var/www/techcon/vendor/yiisoft/yii2/base/ErrorHandler.php(123): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#2 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#3 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "". in /var/www/techcon/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /var/www/techcon/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('', Array)
+#1 /var/www/techcon/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /var/www/techcon/web/index.php(12): yii\base\Applica" while reading upstream, client: 172.21.0.1, server: techcon, request: "GET /web/index.php HTTP/1.1", upstream: "fastcgi://172.21.0.2:9000", host: "127.0.0.1"
+2020/04/26 18:51:08 [error] 6#6: *1 open() "/var/www/techcon/web/index.php/auth/php" failed (20: Not a directory), client: 172.21.0.1, server: techcon, request: "GET /web/index.php/auth/php HTTP/1.1", host: "127.0.0.1"
+2020/04/26 18:51:08 [error] 6#6: *1 open() "/var/www/techcon/web/index.php/auth/php" failed (20: Not a directory), client: 172.21.0.1, server: techcon, request: "GET /web/index.php/auth/php HTTP/1.1", host: "127.0.0.1"
+2020/04/26 18:55:28 [emerg] 1#1: unknown directive "cgi_split_path_info" in /etc/nginx/conf.d/techcon.conf:11
+2020/04/26 18:58:37 [error] 6#6: *1 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\base\InvalidRouteException: Unable to resolve the request "site/error". in /var/www/techcon/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /var/www/techcon/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction('site/error')
+#1 /var/www/techcon/vendor/yiisoft/yii2/base/ErrorHandler.php(123): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#2 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#3 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "". in /var/www/techcon/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /var/www/techcon/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('', Array)
+#1 /var/www/techcon/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /var/www/techcon/web/index.php(12): yii\base\Applica" while reading upstream, client: 172.23.0.1, server: techcon, request: "GET /web/index.php HTTP/1.1", upstream: "fastcgi://172.23.0.2:9000", host: "127.0.0.1"
+2020/04/26 18:58:38 [error] 6#6: *3 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\base\InvalidRouteException: Unable to resolve the request "site/error". in /var/www/techcon/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /var/www/techcon/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction('site/error')
+#1 /var/www/techcon/vendor/yiisoft/yii2/base/ErrorHandler.php(123): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#2 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#3 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "". in /var/www/techcon/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /var/www/techcon/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('', Array)
+#1 /var/www/techcon/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /var/www/techcon/web/index.php(12): yii\base\Applica" while reading upstream, client: 172.23.0.1, server: techcon, request: "GET /web/index.php HTTP/1.1", upstream: "fastcgi://172.23.0.2:9000", host: "127.0.0.1"
+2020/04/26 18:59:52 [error] 7#7: *1 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\base\InvalidRouteException: Unable to resolve the request "site/error". in /var/www/techcon/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /var/www/techcon/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction('site/error')
+#1 /var/www/techcon/vendor/yiisoft/yii2/base/ErrorHandler.php(123): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#2 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#3 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "". in /var/www/techcon/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /var/www/techcon/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('', Array)
+#1 /var/www/techcon/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /var/www/techcon/web/index.php(12): yii\base\Applica" while reading upstream, client: 172.24.0.1, server: techcon, request: "GET /web/index.php HTTP/1.1", upstream: "fastcgi://172.24.0.2:9000", host: "127.0.0.1"
+2020/04/26 18:59:53 [error] 7#7: *3 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\base\InvalidRouteException: Unable to resolve the request "site/error". in /var/www/techcon/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /var/www/techcon/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction('site/error')
+#1 /var/www/techcon/vendor/yiisoft/yii2/base/ErrorHandler.php(123): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#2 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#3 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "". in /var/www/techcon/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /var/www/techcon/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('', Array)
+#1 /var/www/techcon/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /var/www/techcon/web/index.php(12): yii\base\Applica" while reading upstream, client: 172.24.0.1, server: techcon, request: "GET /web/index.php HTTP/1.1", upstream: "fastcgi://172.24.0.2:9000", host: "127.0.0.1"
+2020/04/26 18:59:54 [error] 7#7: *1 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\base\InvalidRouteException: Unable to resolve the request "site/error". in /var/www/techcon/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /var/www/techcon/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction('site/error')
+#1 /var/www/techcon/vendor/yiisoft/yii2/base/ErrorHandler.php(123): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#2 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#3 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "". in /var/www/techcon/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /var/www/techcon/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('', Array)
+#1 /var/www/techcon/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /var/www/techcon/web/index.php(12): yii\base\Applica" while reading upstream, client: 172.24.0.1, server: techcon, request: "GET /web/index.php HTTP/1.1", upstream: "fastcgi://172.24.0.2:9000", host: "127.0.0.1"
+2020/04/26 18:59:55 [error] 7#7: *3 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\base\InvalidRouteException: Unable to resolve the request "site/error". in /var/www/techcon/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /var/www/techcon/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction('site/error')
+#1 /var/www/techcon/vendor/yiisoft/yii2/base/ErrorHandler.php(123): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#2 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#3 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "". in /var/www/techcon/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /var/www/techcon/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('', Array)
+#1 /var/www/techcon/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /var/www/techcon/web/index.php(12): yii\base\Applica" while reading upstream, client: 172.24.0.1, server: techcon, request: "GET /web/index.php HTTP/1.1", upstream: "fastcgi://172.24.0.2:9000", host: "127.0.0.1"
+2020/04/26 18:59:58 [error] 7#7: *3 open() "/var/www/techcon/web/index.php/auth" failed (20: Not a directory), client: 172.24.0.1, server: techcon, request: "GET /web/index.php/auth HTTP/1.1", host: "127.0.0.1"
+2020/04/26 18:59:58 [error] 7#7: *3 open() "/var/www/techcon/web/index.php/auth" failed (20: Not a directory), client: 172.24.0.1, server: techcon, request: "GET /web/index.php/auth HTTP/1.1", host: "127.0.0.1"
+2020/04/26 19:00:14 [error] 7#7: *3 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\base\InvalidRouteException: Unable to resolve the request "site/error". in /var/www/techcon/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /var/www/techcon/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction('site/error')
+#1 /var/www/techcon/vendor/yiisoft/yii2/base/ErrorHandler.php(123): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#2 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#3 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "". in /var/www/techcon/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /var/www/techcon/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('', Array)
+#1 /var/www/techcon/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /var/www/techcon/web/index.php(12): yii\base\Applica" while reading upstream, client: 172.24.0.1, server: techcon, request: "GET /web/index.php HTTP/1.1", upstream: "fastcgi://172.24.0.2:9000", host: "127.0.0.1"
+2020/04/26 19:00:15 [error] 7#7: *3 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\base\InvalidRouteException: Unable to resolve the request "site/error". in /var/www/techcon/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /var/www/techcon/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction('site/error')
+#1 /var/www/techcon/vendor/yiisoft/yii2/base/ErrorHandler.php(123): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#2 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#3 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "". in /var/www/techcon/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /var/www/techcon/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('', Array)
+#1 /var/www/techcon/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /var/www/techcon/web/index.php(12): yii\base\Applica" while reading upstream, client: 172.24.0.1, server: techcon, request: "GET /web/index.php HTTP/1.1", upstream: "fastcgi://172.24.0.2:9000", host: "127.0.0.1"
+2020/04/26 19:01:41 [error] 6#6: *1 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\base\InvalidRouteException: Unable to resolve the request "site/error". in /var/www/techcon/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /var/www/techcon/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction('site/error')
+#1 /var/www/techcon/vendor/yiisoft/yii2/base/ErrorHandler.php(123): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#2 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#3 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "". in /var/www/techcon/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /var/www/techcon/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('', Array)
+#1 /var/www/techcon/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /var/www/techcon/web/index.php(12): yii\base\Applica" while reading upstream, client: 172.25.0.1, server: techcon, request: "GET /web/index.php HTTP/1.1", upstream: "fastcgi://172.25.0.2:9000", host: "127.0.0.1"
+2020/04/26 19:01:43 [error] 6#6: *3 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\base\InvalidRouteException: Unable to resolve the request "site/error". in /var/www/techcon/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /var/www/techcon/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction('site/error')
+#1 /var/www/techcon/vendor/yiisoft/yii2/base/ErrorHandler.php(123): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#2 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#3 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "". in /var/www/techcon/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /var/www/techcon/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('', Array)
+#1 /var/www/techcon/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /var/www/techcon/web/index.php(12): yii\base\Applica" while reading upstream, client: 172.25.0.1, server: techcon, request: "GET /web/index.php HTTP/1.1", upstream: "fastcgi://172.25.0.2:9000", host: "127.0.0.1"
+2020/04/26 19:01:44 [error] 6#6: *3 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\base\InvalidRouteException: Unable to resolve the request "site/error". in /var/www/techcon/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /var/www/techcon/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction('site/error')
+#1 /var/www/techcon/vendor/yiisoft/yii2/base/ErrorHandler.php(123): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#2 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#3 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "". in /var/www/techcon/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /var/www/techcon/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('', Array)
+#1 /var/www/techcon/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /var/www/techcon/web/index.php(12): yii\base\Applica" while reading upstream, client: 172.25.0.1, server: techcon, request: "GET /web/index.php HTTP/1.1", upstream: "fastcgi://172.25.0.2:9000", host: "127.0.0.1"
+2020/04/26 19:01:45 [error] 6#6: *1 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\base\InvalidRouteException: Unable to resolve the request "site/error". in /var/www/techcon/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /var/www/techcon/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction('site/error')
+#1 /var/www/techcon/vendor/yiisoft/yii2/base/ErrorHandler.php(123): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#2 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#3 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "". in /var/www/techcon/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /var/www/techcon/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('', Array)
+#1 /var/www/techcon/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /var/www/techcon/web/index.php(12): yii\base\Applica" while reading upstream, client: 172.25.0.1, server: techcon, request: "GET /web/index.php HTTP/1.1", upstream: "fastcgi://172.25.0.2:9000", host: "127.0.0.1"
+2020/04/26 19:01:45 [error] 6#6: *3 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\base\InvalidRouteException: Unable to resolve the request "site/error". in /var/www/techcon/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /var/www/techcon/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction('site/error')
+#1 /var/www/techcon/vendor/yiisoft/yii2/base/ErrorHandler.php(123): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#2 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#3 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "". in /var/www/techcon/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /var/www/techcon/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('', Array)
+#1 /var/www/techcon/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /var/www/techcon/web/index.php(12): yii\base\Applica" while reading upstream, client: 172.25.0.1, server: techcon, request: "GET /web/index.php HTTP/1.1", upstream: "fastcgi://172.25.0.2:9000", host: "127.0.0.1"
+2020/04/26 19:01:46 [error] 6#6: *1 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\base\InvalidRouteException: Unable to resolve the request "site/error". in /var/www/techcon/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /var/www/techcon/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction('site/error')
+#1 /var/www/techcon/vendor/yiisoft/yii2/base/ErrorHandler.php(123): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#2 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#3 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "". in /var/www/techcon/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /var/www/techcon/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('', Array)
+#1 /var/www/techcon/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /var/www/techcon/web/index.php(12): yii\base\Applica" while reading upstream, client: 172.25.0.1, server: techcon, request: "GET /web/index.php HTTP/1.1", upstream: "fastcgi://172.25.0.2:9000", host: "127.0.0.1"
+2020/04/26 19:01:49 [error] 6#6: *1 open() "/var/www/techcon/web/index.php/auth" failed (20: Not a directory), client: 172.25.0.1, server: techcon, request: "GET /web/index.php/auth HTTP/1.1", host: "127.0.0.1"
+2020/04/26 19:01:49 [error] 6#6: *1 open() "/var/www/techcon/web/index.php/auth" failed (20: Not a directory), client: 172.25.0.1, server: techcon, request: "GET /web/index.php/auth HTTP/1.1", host: "127.0.0.1"
+2020/04/26 19:02:16 [error] 7#7: *1 open() "/var/www/techcon/web/index.php/auth" failed (20: Not a directory), client: 172.26.0.1, server: techcon, request: "GET /web/index.php/auth HTTP/1.1", host: "127.0.0.1"
+2020/04/26 19:02:16 [error] 7#7: *2 open() "/var/www/techcon/web/index.php/auth" failed (20: Not a directory), client: 172.26.0.1, server: techcon, request: "GET /web/index.php/auth HTTP/1.1", host: "127.0.0.1"
+2020/04/26 19:02:17 [error] 7#7: *2 open() "/var/www/techcon/web/index.php/auth" failed (20: Not a directory), client: 172.26.0.1, server: techcon, request: "GET /web/index.php/auth HTTP/1.1", host: "127.0.0.1"
+2020/04/26 19:02:17 [error] 7#7: *1 open() "/var/www/techcon/web/index.php/auth" failed (20: Not a directory), client: 172.26.0.1, server: techcon, request: "GET /web/index.php/auth HTTP/1.1", host: "127.0.0.1"
+2020/04/26 19:02:17 [error] 7#7: *1 open() "/var/www/techcon/web/index.php/auth" failed (20: Not a directory), client: 172.26.0.1, server: techcon, request: "GET /web/index.php/auth HTTP/1.1", host: "127.0.0.1"
+2020/04/26 19:02:17 [error] 7#7: *2 open() "/var/www/techcon/web/index.php/auth" failed (20: Not a directory), client: 172.26.0.1, server: techcon, request: "GET /web/index.php/auth HTTP/1.1", host: "127.0.0.1"
+2020/04/26 19:02:17 [error] 7#7: *2 open() "/var/www/techcon/web/index.php/auth" failed (20: Not a directory), client: 172.26.0.1, server: techcon, request: "GET /web/index.php/auth HTTP/1.1", host: "127.0.0.1"
+2020/04/26 19:02:17 [error] 7#7: *2 open() "/var/www/techcon/web/index.php/auth" failed (20: Not a directory), client: 172.26.0.1, server: techcon, request: "GET /web/index.php/auth HTTP/1.1", host: "127.0.0.1"
+2020/04/26 19:02:17 [error] 7#7: *1 open() "/var/www/techcon/web/index.php/auth" failed (20: Not a directory), client: 172.26.0.1, server: techcon, request: "GET /web/index.php/auth HTTP/1.1", host: "127.0.0.1"
+2020/04/26 19:02:17 [error] 7#7: *1 open() "/var/www/techcon/web/index.php/auth" failed (20: Not a directory), client: 172.26.0.1, server: techcon, request: "GET /web/index.php/auth HTTP/1.1", host: "127.0.0.1"
+2020/04/26 19:02:17 [error] 7#7: *2 open() "/var/www/techcon/web/index.php/auth" failed (20: Not a directory), client: 172.26.0.1, server: techcon, request: "GET /web/index.php/auth HTTP/1.1", host: "127.0.0.1"
+2020/04/26 19:02:17 [error] 7#7: *1 open() "/var/www/techcon/web/index.php/auth" failed (20: Not a directory), client: 172.26.0.1, server: techcon, request: "GET /web/index.php/auth HTTP/1.1", host: "127.0.0.1"
+2020/04/26 19:02:18 [error] 7#7: *1 open() "/var/www/techcon/web/index.php/auth" failed (20: Not a directory), client: 172.26.0.1, server: techcon, request: "GET /web/index.php/auth HTTP/1.1", host: "127.0.0.1"
+2020/04/26 19:02:18 [error] 7#7: *1 open() "/var/www/techcon/web/index.php/auth" failed (20: Not a directory), client: 172.26.0.1, server: techcon, request: "GET /web/index.php/auth HTTP/1.1", host: "127.0.0.1"
+2020/04/26 19:02:18 [error] 7#7: *1 open() "/var/www/techcon/web/index.php/auth" failed (20: Not a directory), client: 172.26.0.1, server: techcon, request: "GET /web/index.php/auth HTTP/1.1", host: "127.0.0.1"
+2020/04/26 19:02:18 [error] 7#7: *2 open() "/var/www/techcon/web/index.php/auth" failed (20: Not a directory), client: 172.26.0.1, server: techcon, request: "GET /web/index.php/auth HTTP/1.1", host: "127.0.0.1"
+2020/04/26 19:02:22 [error] 7#7: *2 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\base\InvalidRouteException: Unable to resolve the request "site/error". in /var/www/techcon/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /var/www/techcon/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction('site/error')
+#1 /var/www/techcon/vendor/yiisoft/yii2/base/ErrorHandler.php(123): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#2 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#3 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "". in /var/www/techcon/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /var/www/techcon/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('', Array)
+#1 /var/www/techcon/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /var/www/techcon/web/index.php(12): yii\base\Applica" while reading upstream, client: 172.26.0.1, server: techcon, request: "GET /web/index.php HTTP/1.1", upstream: "fastcgi://172.26.0.2:9000", host: "127.0.0.1"
+2020/04/26 19:02:23 [error] 7#7: *2 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\base\InvalidRouteException: Unable to resolve the request "site/error". in /var/www/techcon/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /var/www/techcon/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction('site/error')
+#1 /var/www/techcon/vendor/yiisoft/yii2/base/ErrorHandler.php(123): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#2 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#3 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "". in /var/www/techcon/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /var/www/techcon/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('', Array)
+#1 /var/www/techcon/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /var/www/techcon/web/index.php(12): yii\base\Applica" while reading upstream, client: 172.26.0.1, server: techcon, request: "GET /web/index.php HTTP/1.1", upstream: "fastcgi://172.26.0.2:9000", host: "127.0.0.1"
+2020/04/26 19:02:29 [error] 7#7: *2 open() "/var/www/techcon/web/index.php/auth" failed (20: Not a directory), client: 172.26.0.1, server: techcon, request: "GET /web/index.php/auth HTTP/1.1", host: "127.0.0.1"
+2020/04/26 19:02:29 [error] 7#7: *2 open() "/var/www/techcon/web/index.php/auth" failed (20: Not a directory), client: 172.26.0.1, server: techcon, request: "GET /web/index.php/auth HTTP/1.1", host: "127.0.0.1"
+2020/04/26 19:02:58 [error] 6#6: *1 open() "/var/www/techcon/web/index.php/auth" failed (20: Not a directory), client: 172.27.0.1, server: techcon, request: "GET /web/index.php/auth HTTP/1.1", host: "127.0.0.1"
+2020/04/26 19:02:59 [error] 6#6: *2 open() "/var/www/techcon/web/index.php/auth" failed (20: Not a directory), client: 172.27.0.1, server: techcon, request: "GET /web/index.php/auth HTTP/1.1", host: "127.0.0.1"
+2020/04/26 19:02:59 [error] 6#6: *2 open() "/var/www/techcon/web/index.php/auth" failed (20: Not a directory), client: 172.27.0.1, server: techcon, request: "GET /web/index.php/auth HTTP/1.1", host: "127.0.0.1"
+2020/04/26 19:02:59 [error] 6#6: *1 open() "/var/www/techcon/web/index.php/auth" failed (20: Not a directory), client: 172.27.0.1, server: techcon, request: "GET /web/index.php/auth HTTP/1.1", host: "127.0.0.1"
+2020/04/26 19:03:00 [error] 6#6: *1 open() "/var/www/techcon/web/index.php/auth" failed (20: Not a directory), client: 172.27.0.1, server: techcon, request: "GET /web/index.php/auth HTTP/1.1", host: "127.0.0.1"
+2020/04/26 19:03:00 [error] 6#6: *2 open() "/var/www/techcon/web/index.php/auth" failed (20: Not a directory), client: 172.27.0.1, server: techcon, request: "GET /web/index.php/auth HTTP/1.1", host: "127.0.0.1"
+2020/04/26 19:03:00 [error] 6#6: *2 open() "/var/www/techcon/web/index.php/auth" failed (20: Not a directory), client: 172.27.0.1, server: techcon, request: "GET /web/index.php/auth HTTP/1.1", host: "127.0.0.1"
+2020/04/26 19:03:00 [error] 6#6: *1 open() "/var/www/techcon/web/index.php/auth" failed (20: Not a directory), client: 172.27.0.1, server: techcon, request: "GET /web/index.php/auth HTTP/1.1", host: "127.0.0.1"
+2020/04/26 19:03:00 [error] 6#6: *1 open() "/var/www/techcon/web/index.php/auth" failed (20: Not a directory), client: 172.27.0.1, server: techcon, request: "GET /web/index.php/auth HTTP/1.1", host: "127.0.0.1"
+2020/04/26 19:03:00 [error] 6#6: *1 open() "/var/www/techcon/web/index.php/auth" failed (20: Not a directory), client: 172.27.0.1, server: techcon, request: "GET /web/index.php/auth HTTP/1.1", host: "127.0.0.1"
+2020/04/26 19:03:00 [error] 6#6: *2 open() "/var/www/techcon/web/index.php/auth" failed (20: Not a directory), client: 172.27.0.1, server: techcon, request: "GET /web/index.php/auth HTTP/1.1", host: "127.0.0.1"
+2020/04/26 19:03:00 [error] 6#6: *1 open() "/var/www/techcon/web/index.php/auth" failed (20: Not a directory), client: 172.27.0.1, server: techcon, request: "GET /web/index.php/auth HTTP/1.1", host: "127.0.0.1"
+2020/04/26 19:03:47 [error] 7#7: *1 open() "/var/www/techcon/web/index.php/auth" failed (20: Not a directory), client: 172.28.0.1, server: techcon, request: "GET /web/index.php/auth HTTP/1.1", host: "127.0.0.1"
+2020/04/26 19:03:47 [error] 7#7: *2 open() "/var/www/techcon/web/index.php/auth" failed (20: Not a directory), client: 172.28.0.1, server: techcon, request: "GET /web/index.php/auth HTTP/1.1", host: "127.0.0.1"
+2020/04/26 19:03:48 [error] 7#7: *2 open() "/var/www/techcon/web/index.php/auth" failed (20: Not a directory), client: 172.28.0.1, server: techcon, request: "GET /web/index.php/auth HTTP/1.1", host: "127.0.0.1"
+2020/04/26 19:03:48 [error] 7#7: *2 open() "/var/www/techcon/web/index.php/auth" failed (20: Not a directory), client: 172.28.0.1, server: techcon, request: "GET /web/index.php/auth HTTP/1.1", host: "127.0.0.1"
+2020/04/26 19:03:48 [error] 7#7: *2 open() "/var/www/techcon/web/index.php/auth" failed (20: Not a directory), client: 172.28.0.1, server: techcon, request: "GET /web/index.php/auth HTTP/1.1", host: "127.0.0.1"
+2020/04/26 19:03:48 [error] 7#7: *1 open() "/var/www/techcon/web/index.php/auth" failed (20: Not a directory), client: 172.28.0.1, server: techcon, request: "GET /web/index.php/auth HTTP/1.1", host: "127.0.0.1"
+2020/04/26 19:03:51 [error] 7#7: *1 open() "/var/www/techcon/web/index.php/auth" failed (20: Not a directory), client: 172.28.0.1, server: techcon, request: "GET /web/index.php/auth HTTP/1.1", host: "127.0.0.1"
+2020/04/26 19:03:51 [error] 7#7: *2 open() "/var/www/techcon/web/index.php/auth" failed (20: Not a directory), client: 172.28.0.1, server: techcon, request: "GET /web/index.php/auth HTTP/1.1", host: "127.0.0.1"
+2020/04/26 19:03:55 [error] 7#7: *2 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\base\InvalidRouteException: Unable to resolve the request "site/error". in /var/www/techcon/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /var/www/techcon/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction('site/error')
+#1 /var/www/techcon/vendor/yiisoft/yii2/base/ErrorHandler.php(123): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#2 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#3 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "". in /var/www/techcon/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /var/www/techcon/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('', Array)
+#1 /var/www/techcon/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /var/www/techcon/web/index.php(12): yii\base\Applica" while reading upstream, client: 172.28.0.1, server: techcon, request: "GET /web/index.php HTTP/1.1", upstream: "fastcgi://172.28.0.2:9000", host: "127.0.0.1"
+2020/04/26 19:03:56 [error] 7#7: *2 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\base\InvalidRouteException: Unable to resolve the request "site/error". in /var/www/techcon/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /var/www/techcon/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction('site/error')
+#1 /var/www/techcon/vendor/yiisoft/yii2/base/ErrorHandler.php(123): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#2 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#3 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "". in /var/www/techcon/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /var/www/techcon/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('', Array)
+#1 /var/www/techcon/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /var/www/techcon/web/index.php(12): yii\base\Applica" while reading upstream, client: 172.28.0.1, server: techcon, request: "GET /web/index.php HTTP/1.1", upstream: "fastcgi://172.28.0.2:9000", host: "127.0.0.1"
+2020/04/26 19:04:01 [error] 7#7: *2 open() "/var/www/techcon/web/index.php/auth" failed (20: Not a directory), client: 172.28.0.1, server: techcon, request: "GET /web/index.php/auth HTTP/1.1", host: "127.0.0.1"
+2020/04/26 19:04:01 [error] 7#7: *2 open() "/var/www/techcon/web/index.php/auth" failed (20: Not a directory), client: 172.28.0.1, server: techcon, request: "GET /web/index.php/auth HTTP/1.1", host: "127.0.0.1"
+2020/04/26 19:05:18 [error] 6#6: *1 open() "/var/www/techcon/web/index.php/auth" failed (20: Not a directory), client: 172.29.0.1, server: techcon, request: "GET /web/index.php/auth HTTP/1.1", host: "127.0.0.1"
+2020/04/26 19:05:18 [error] 6#6: *2 open() "/var/www/techcon/web/index.php/auth" failed (20: Not a directory), client: 172.29.0.1, server: techcon, request: "GET /web/index.php/auth HTTP/1.1", host: "127.0.0.1"
+2020/04/26 19:05:19 [error] 6#6: *2 open() "/var/www/techcon/web/index.php/auth" failed (20: Not a directory), client: 172.29.0.1, server: techcon, request: "GET /web/index.php/auth HTTP/1.1", host: "127.0.0.1"
+2020/04/26 19:05:19 [error] 6#6: *1 open() "/var/www/techcon/web/index.php/auth" failed (20: Not a directory), client: 172.29.0.1, server: techcon, request: "GET /web/index.php/auth HTTP/1.1", host: "127.0.0.1"
+2020/04/26 19:05:21 [error] 6#6: *1 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\base\InvalidRouteException: Unable to resolve the request "site/error". in /var/www/techcon/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /var/www/techcon/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction('site/error')
+#1 /var/www/techcon/vendor/yiisoft/yii2/base/ErrorHandler.php(123): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#2 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#3 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "". in /var/www/techcon/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /var/www/techcon/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('', Array)
+#1 /var/www/techcon/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /var/www/techcon/web/index.php(12): yii\base\Applica" while reading upstream, client: 172.29.0.1, server: techcon, request: "GET /web/index.php HTTP/1.1", upstream: "fastcgi://172.29.0.2:9000", host: "127.0.0.1"
+2020/04/26 19:05:22 [error] 6#6: *1 open() "/var/www/techcon/web/index.php/auth" failed (20: Not a directory), client: 172.29.0.1, server: techcon, request: "GET /web/index.php/auth HTTP/1.1", host: "127.0.0.1"
+2020/04/26 19:05:22 [error] 6#6: *5 open() "/var/www/techcon/web/index.php/auth" failed (20: Not a directory), client: 172.29.0.1, server: techcon, request: "GET /web/index.php/auth HTTP/1.1", host: "127.0.0.1"
+2020/04/26 19:05:23 [error] 6#6: *2 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\base\InvalidRouteException: Unable to resolve the request "site/error". in /var/www/techcon/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /var/www/techcon/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction('site/error')
+#1 /var/www/techcon/vendor/yiisoft/yii2/base/ErrorHandler.php(123): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#2 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#3 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "". in /var/www/techcon/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /var/www/techcon/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('', Array)
+#1 /var/www/techcon/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /var/www/techcon/web/index.php(12): yii\base\Applica" while reading upstream, client: 172.29.0.1, server: techcon, request: "GET /web/index.php HTTP/1.1", upstream: "fastcgi://172.29.0.2:9000", host: "127.0.0.1"
+2020/04/26 19:05:24 [error] 6#6: *5 open() "/var/www/techcon/web/index.php/auth" failed (20: Not a directory), client: 172.29.0.1, server: techcon, request: "GET /web/index.php/auth HTTP/1.1", host: "127.0.0.1"
+2020/04/26 19:05:24 [error] 6#6: *1 open() "/var/www/techcon/web/index.php/auth" failed (20: Not a directory), client: 172.29.0.1, server: techcon, request: "GET /web/index.php/auth HTTP/1.1", host: "127.0.0.1"
+2020/04/26 19:05:24 [error] 6#6: *2 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\base\InvalidRouteException: Unable to resolve the request "site/error". in /var/www/techcon/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /var/www/techcon/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction('site/error')
+#1 /var/www/techcon/vendor/yiisoft/yii2/base/ErrorHandler.php(123): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#2 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#3 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "". in /var/www/techcon/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /var/www/techcon/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('', Array)
+#1 /var/www/techcon/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /var/www/techcon/web/index.php(12): yii\base\Applica" while reading upstream, client: 172.29.0.1, server: techcon, request: "GET /web/index.php HTTP/1.1", upstream: "fastcgi://172.29.0.2:9000", host: "127.0.0.1"
+2020/04/26 19:05:25 [error] 6#6: *2 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\base\InvalidRouteException: Unable to resolve the request "site/error". in /var/www/techcon/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /var/www/techcon/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction('site/error')
+#1 /var/www/techcon/vendor/yiisoft/yii2/base/ErrorHandler.php(123): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#2 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#3 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "". in /var/www/techcon/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /var/www/techcon/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('', Array)
+#1 /var/www/techcon/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /var/www/techcon/web/index.php(12): yii\base\Applica" while reading upstream, client: 172.29.0.1, server: techcon, request: "GET /web/index.php HTTP/1.1", upstream: "fastcgi://172.29.0.2:9000", host: "127.0.0.1"
+2020/04/26 19:07:46 [error] 6#6: *8 open() "/var/www/techcon/web/index.php/auth" failed (20: Not a directory), client: 172.29.0.1, server: techcon, request: "GET /web/index.php/auth HTTP/1.1", host: "127.0.0.1"
+2020/04/26 19:07:46 [error] 6#6: *9 open() "/var/www/techcon/web/index.php/auth" failed (20: Not a directory), client: 172.29.0.1, server: techcon, request: "GET /web/index.php/auth HTTP/1.1", host: "127.0.0.1"
+2020/04/26 19:13:57 [error] 6#6: *3 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\base\InvalidRouteException: Unable to resolve the request "site/error". in /var/www/techcon/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /var/www/techcon/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction('site/error')
+#1 /var/www/techcon/vendor/yiisoft/yii2/base/ErrorHandler.php(123): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#2 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#3 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "". in /var/www/techcon/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /var/www/techcon/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('', Array)
+#1 /var/www/techcon/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /var/www/techcon/web/index.php(12): yii\base\Applica" while reading upstream, client: 172.30.0.1, server: techcon, request: "GET /web/index.php HTTP/1.1", upstream: "fastcgi://172.30.0.2:9000", host: "127.0.0.1"
+2020/04/26 19:13:58 [error] 6#6: *1 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\base\InvalidRouteException: Unable to resolve the request "site/error". in /var/www/techcon/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /var/www/techcon/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction('site/error')
+#1 /var/www/techcon/vendor/yiisoft/yii2/base/ErrorHandler.php(123): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#2 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#3 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "". in /var/www/techcon/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /var/www/techcon/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('', Array)
+#1 /var/www/techcon/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /var/www/techcon/web/index.php(12): yii\base\Applica" while reading upstream, client: 172.30.0.1, server: techcon, request: "GET /web/index.php HTTP/1.1", upstream: "fastcgi://172.30.0.2:9000", host: "127.0.0.1"
+2020/04/26 19:14:02 [error] 6#6: *15 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\base\InvalidRouteException: Unable to resolve the request "site/error". in /var/www/techcon/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /var/www/techcon/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction('site/error')
+#1 /var/www/techcon/vendor/yiisoft/yii2/base/ErrorHandler.php(123): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#2 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#3 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "". in /var/www/techcon/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /var/www/techcon/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('', Array)
+#1 /var/www/techcon/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /var/www/techcon/web/index.php(12): yii\base\Applica" while reading upstream, client: 172.30.0.1, server: techcon, request: "GET /web/index.php HTTP/1.1", upstream: "fastcgi://172.30.0.2:9000", host: "127.0.0.1"
+2020/04/26 19:14:02 [error] 6#6: *15 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\base\InvalidRouteException: Unable to resolve the request "site/error". in /var/www/techcon/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /var/www/techcon/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction('site/error')
+#1 /var/www/techcon/vendor/yiisoft/yii2/base/ErrorHandler.php(123): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#2 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#3 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "". in /var/www/techcon/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /var/www/techcon/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('', Array)
+#1 /var/www/techcon/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /var/www/techcon/web/index.php(12): yii\base\Applica" while reading upstream, client: 172.30.0.1, server: techcon, request: "GET /web/index.php HTTP/1.1", upstream: "fastcgi://172.30.0.2:9000", host: "127.0.0.1"
