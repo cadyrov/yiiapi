@@ -34,13 +34,13 @@ install postgresql (only on server)
 ```
 
 config postgress
-    ```
+```
     mcedit /etc/postgresql/10/main/postgresql.conf 
         listen_addresses = '*'
     mcedit /etc/postgresql/10/main/pg_hba.conf
         host    base          user            0.0.0.0/0  md5
     service postgresql restart
-    ```
+```
 
 install project
 ```
@@ -50,7 +50,7 @@ install project
     set project db config like  pgsql:host=serveAdress;port=5432;dbname=dbname
 ```
 up docker        
-   ```
+```
     docker-compose up -d
         #first time update depends
         docker exec -it yiiapi_php_1 /bin/bash
@@ -58,10 +58,10 @@ up docker
         php composer.phar update
         create token on github if it is necessary
     exit
-    ```
+```
 
 fist time up only on server
-    ```
+```
     create migrations
         php yii migrate --migrationPath=@yii/rbac/migrations/
         php yii migrate 
