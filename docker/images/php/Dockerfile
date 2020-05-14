@@ -1,31 +1,28 @@
-FROM php:7.1-fpm
+from ubuntu:18.04
 
-RUN apt-get update && apt-get install -y \
-        libfreetype6-dev \
-        libjpeg62-turbo-dev \
-        libmcrypt-dev \
-        libpng-dev \
-        libicu-dev \
-        libpq-dev \
-        libxpm-dev \
-        libvpx-dev \
-    && pecl install xdebug \
-    && docker-php-ext-enable xdebug \
-    && docker-php-ext-install -j$(nproc) mcrypt \
-    && docker-php-ext-install -j$(nproc) gd \
-    && docker-php-ext-install -j$(nproc) intl \
-    && docker-php-ext-install -j$(nproc) zip \
-    && docker-php-ext-install -j$(nproc) pgsql \
-    && docker-php-ext-install -j$(nproc) pdo_pgsql \
-    && docker-php-ext-install -j$(nproc) exif \
-    && docker-php-ext-configure gd \
-        --with-freetype-dir=/usr/include/ \
-        --with-jpeg-dir=/usr/include/ \
-        --with-xpm-dir=/usr/lib/x86_64-linux-gnu/ \
-        --with-vpx-dir=/usr/lib/x86_64-linux-gnu/
+ARG TZ
+ARG CONTAINER_USER
+ARG CONTAINER_UID
+ARG CONTAINER_GID
+ARG PHP_VERSION
+ARG PHP_FPM_USER
 
-ADD php.ini /usr/local/etc/php/conf.d/40-custom.ini
+ENV C_USER=$CONTAINER_USER \
+    C_UID=$CONTAINER_UID \
+    C_GID=$CONTAINER_GID
 
-WORKDIR /var/www/yiiapi
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone && \ 
+    apt-get update && \
+    DEBIAN_FRONTEND=noninteractive apt-get -y upgrade && \
+    DEBIAN_FRONTEND=noninteractive apt-get install -y php7.2-fpm php7.2-xml php7.2-mbstring php7.2-gd php7.2-pgsql php7.2-zip php7.2-pdo php7.2-sybase php7.2-curl && \
+    mkdir -p /run/php && \
+    sed -i 's/^listen = .*/listen = 0.0.0.0:9000/' /etc/php/7.2/fpm/pool.d/www.conf && \
+    sed -i "s/upload_max_filesize = 2M/upload_max_filesize = 400M/g" /etc/php/7.2/fpm/php.ini && \
+    sed -i "s/post_max_size = 8M/post_max_size = 400M/g" /etc/php/7.2/fpm/php.ini && \
+    sed -i "s/memory_limit = 128M/memory_limit = 1024M/g" /etc/php/7.2/fpm/php.ini && \
+    sed -i "s/^display_errors = .*/display_errors = On/" /etc/php/7.2/fpm/php.ini && \
+    sed -i "s/max_execution_time = 30/max_execution_time = 0/g" /etc/php/7.2/fpm/php.ini
 
-CMD ["php-fpm"]
+EXPOSE 9000
+
+CMD ["/usr/sbin/php-fpm7.2", "-F"]
