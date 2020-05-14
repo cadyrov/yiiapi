@@ -38,8 +38,8 @@ class BaseController extends Controller
 
     public function beforeAction($action)
     {
+        self::setHeadersCors();
         if (Yii::$app->request->isOptions) {
-            self::setHeadersCors();
             Yii::$app->response->statusCode = 204;
             return;
         }
