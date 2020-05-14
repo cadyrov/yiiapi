@@ -13,8 +13,8 @@ class AuthController extends Controller
 {
     public function beforeAction($action)
     {
+        BaseController::setHeadersCors();
         if (Yii::$app->request->isOptions) {
-            BaseController::setHeadersCors();
             return;
         }
         return parent::beforeAction($action);
