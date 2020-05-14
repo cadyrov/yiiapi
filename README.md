@@ -39,6 +39,7 @@ config postgress
         listen_addresses = '*'
     mcedit /etc/postgresql/10/main/pg_hba.conf
         host    base          user            0.0.0.0/0  md5
+        host    base          user            ::0/0  md5
     service postgresql restart
 ```
 
