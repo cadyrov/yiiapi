@@ -31,9 +31,9 @@ install postgresql (only on server)
 
 config postgress
 ```
-    mcedit /etc/postgresql/10/main/postgresql.conf 
+    mcedit /etc/postgresql/XX/main/postgresql.conf 
         listen_addresses = '*'
-    mcedit /etc/postgresql/10/main/pg_hba.conf
+    mcedit /etc/postgresql/XX/main/pg_hba.conf
         host    base          user            0.0.0.0/0  md5
         host    base          user            ::0/0  md5
     service postgresql restart
