@@ -10,6 +10,7 @@ Installation
 instal dockerCe
 ```
     sudo apt install docker.io
+    sudo systemctl enable --now docker
     apt install -y docker-compose
 ```
 
