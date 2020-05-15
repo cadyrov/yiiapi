@@ -16,6 +16,7 @@ instal dockerCe
     sudo apt update
     apt-cache policy docker-ce
     sudo apt install docker-ce
+    apt install -y docker-compose
 ```
 
 install git
