@@ -19,6 +19,8 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone &
     sed -i 's/^listen = .*/listen = 0.0.0.0:9000/' /etc/php/7.2/fpm/pool.d/www.conf && \
     sed -i "s/upload_max_filesize = 2M/upload_max_filesize = 400M/g" /etc/php/7.2/fpm/php.ini && \
     sed -i "s/post_max_size = 8M/post_max_size = 400M/g" /etc/php/7.2/fpm/php.ini && \
+    sed -i "s/session.gc_maxlifetime = 1440/session.gc_maxlifetime = 86400/g" /etc/php/7.2/fpm/php.ini && \
+    
     sed -i "s/memory_limit = 128M/memory_limit = 1024M/g" /etc/php/7.2/fpm/php.ini && \
     sed -i "s/^display_errors = .*/display_errors = On/" /etc/php/7.2/fpm/php.ini && \
     sed -i "s/max_execution_time = 30/max_execution_time = 0/g" /etc/php/7.2/fpm/php.ini
