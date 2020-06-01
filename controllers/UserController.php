@@ -145,7 +145,7 @@ class UserController extends BaseController
     {
         $user = new User();
         $user->setAttributes(Yii::$app->request->post());
-        $usrOld = User::findOne(Yii::$app->request->post(id));
+        $usrOld = User::findOne(Yii::$app->request->post('id'));
         if (!$usrOld) {
             self::error("user not found", 400);
             return;
